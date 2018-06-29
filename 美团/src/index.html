@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper-4.1.6.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/libs/flexible.js"></script>
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="swiper-container">
+            <div class="swiper-wrapper wrapper"></div>
+            <script id="img" type="text/x-handlebars-template">
+                {{#each this}}
+                <div class="swiper-slide">
+                    <img src="{{imageUrl}}">
+                </div>
+                {{/each}}
+            </script>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="search">
+            <div class="tab">
+                <span>全日房</span>
+                <span>钟点房</span>
+                <div class="line"></div>
+            </div>
+            <div class="search_address">
+                <span>目的地<b class="ads">北京</b></span>
+                <i class="iconfont icon-jiantouyou"></i>
+            </div>
+            <div class="search_time">
+                <span>时间<b>6月27日</b></span>
+                <i class="iconfont icon-jiantouyou"></i>
+            </div>
+            <div class="search_items">
+                <span>搜索<b>我的附近<em>位置/酒店/关键词</em></b></span>
+                <i class="iconfont icon-jiantouyou"></i>
+            </div>
+            <button>查找酒店</button>
+        </div>
+    </div>
+    <script src="js/libs/require.js"></script>
+    <script>
+        require(['./js/main.js'], function() {
+            require(['index'])
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+@import './tpl/common.scss';
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    header {
+        width: 100%;
+        height: pxTorem(44px);
+        background: #eee;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        i.iconfont {
+            font-size: pxTorem(20px);
+            padding: 0 pxTorem(10px);
+        }
+        input {
+            background: #fff;
+            flex: 1;
+            margin-right: pxTorem(20px);
+            height: 60%;
+            border: 1px solid #ccc;
+            padding-left: pxTorem(10px);
+        }
+    }
+    section {
+        width: 100%;
+        overflow-y: scroll;
+        flex: 1;
+        .con {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            dl {
+                width: 100%;
+                display: flex;
+                padding: pxTorem(6px) pxTorem(10px);
+                box-sizing: border-box;
+                border-bottom: 1px solid #ccc;
+                dt {
+                    width: pxTorem(120px);
+                    height: pxTorem(120px);
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                dd {
+                    flex: 1;
+                    padding-left: pxTorem(8px);
+                    line-height: 1.6;
+                    h2 {
+                        font-size: pxTorem(14px);
+                    }
+                    p>span {
+                        color: orange;
+                    }
+                    p>b {
+                        padding-left: pxTorem(8px);
+                        color: #bbb;
+                    }
+                    address {
+                        color: #bbb;
+                    }
+                    strong {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        >span {
+                            color: #2BB2A3;
+                            font-weight: 500;
+                            font-size: pxTorem(16px);
+                        }
+                        >b {
+                            color: #bbb;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

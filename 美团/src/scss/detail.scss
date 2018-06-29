@@ -1,0 +1,35 @@
+@import './tpl/common.scss';
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .con {
+        width: 100%;
+        .top {
+            width: 100%;
+            position: relative;
+            img {
+                width: 100%;
+            }
+            .back {
+                width: pxTorem(36px);
+                height: pxTorem(36px);
+                background: rgba(0, 0, 0, .3);
+                border-radius: 50%;
+                display: block;
+                line-height: pxTorem(36px);
+                text-align: center;
+                font-size: pxTorem(18px);
+                color: #fff;
+                position: absolute;
+                top: pxTorem(10px);
+                left: pxTorem(10px);
+            }
+            h1 {
+                padding: pxTorem(10px);
+                box-sizing: border-box;
+                font-size: pxTorem(20px);
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+@import './tpl/common.scss';
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #F0EFED;
+    position: relative;
+    .swiper-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        .swiper-wrapper,
+        .swiper-slide {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.swiper-pagination {
+    position: absolute;
+    top: 66%;
+    left: 0;
+    span {
+        width: pxTorem(8px);
+        height: pxTorem(8px);
+    }
+}
+
+.search {
+    width: 90%;
+    height: pxTorem(260px);
+    background: #fff;
+    text-align: center;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: pxTorem(160px);
+    z-index: 99;
+    button {
+        width: 90%;
+        margin-left: 5%;
+        height: pxTorem(44px);
+        background: #2BB2A3;
+        color: #fff;
+        font-size: pxTorem(16px);
+        border: 0;
+        border-radius: pxTorem(6px);
+        margin-top: pxTorem(10px);
+    }
+    .tab {
+        width: 100%;
+        height: pxTorem(48px);
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        position: relative;
+        >span {
+            flex: 1;
+            font-size: pxTorem(18px);
+            line-height: pxTorem(48px);
+            &:first-child {
+                border-right: 1px solid #ccc;
+            }
+        }
+        .line {
+            width: pxTorem(150px);
+            background: #2BB2A3;
+            height: pxTorem(4px);
+            position: absolute;
+            left: pxTorem(20px);
+            bottom: 0;
+            border-radius: pxTorem(2px);
+            transition: all .5s;
+        }
+        .move {
+            transform: translateX(pxTorem(150px));
+        }
+    }
+    .search_address,
+    .search_time,
+    .search_items {
+        width: 100%;
+        display: flex;
+        height: pxTorem(48px);
+        border-bottom: 1px solid #ccc;
+        padding: 0 pxTorem(16px);
+        box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
+        font-size: pxTorem(16px);
+        span {
+            color: #ACACAC;
+            b {
+                color: #000;
+                padding-left: pxTorem(20px);
+            }
+        }
+        i.iconfont {
+            font-size: pxTorem(16px);
+            color: #ACACAC;
+        }
+    }
+    .search_time,
+    .search_items {
+        span {
+            b {
+                padding-left: pxTorem(38px);
+                em {
+                    font-size: pxTorem(14px);
+                    padding-left: pxTorem(20px);
+                    color: #ACACAC;
+                }
+            }
+        }
+    }
+}

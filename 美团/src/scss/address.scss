@@ -1,0 +1,58 @@
+@import './tpl/common.scss';
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    header {
+        width: 100%;
+        height: pxTorem(44px);
+        line-height: pxTorem(44px);
+        display: flex;
+        justify-content: space-between;
+        flex-shrink: 0;
+        padding: 0 pxTorem(14px);
+        box-sizing: border-box;
+        background: #eee;
+        font-size: pxTorem(16px);
+        border-bottom: 1px solid #ccc;
+        i.iconfont {
+            font-size: pxTorem(18px);
+        }
+    }
+    .list {
+        width: 100%;
+        overflow-y: scroll;
+        >div {
+            width: 100%;
+            h1 {
+                background: #eee;
+                padding: pxTorem(2px) pxTorem(10px);
+                box-sizing: border-box;
+                font-size: pxTorem(14px);
+                color: #bbb;
+            }
+            ul>li {
+                line-height: pxTorem(44px);
+                margin-left: pxTorem(10px);
+                box-sizing: border-box;
+                border-bottom: 1px solid #ccc;
+                font-size: pxTorem(14px);
+            }
+        }
+    }
+}
+
+.list_titile {
+    position: absolute;
+    top: pxTorem(150px);
+    right: pxTorem(10px);
+    background: rgba(0, 0, 0, .2);
+    padding: pxTorem(4px);
+    border-radius: pxTorem(12px);
+    color: #fff;
+    ol>li {
+        padding-top: pxTorem(6px);
+    }
+}

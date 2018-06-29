@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <script src="../js/libs/flexible.js"></script>
+    <link rel="stylesheet" href="../css/list.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <i class="iconfont icon-zhixiangzuo back"></i>
+            <input type="text" placeholder="请输入酒店名称">
+        </header>
+        <section>
+            <div class="con"></div>
+            <script id="list" type="text/x-handlebars-template">
+                {{#each data.searchresult}}
+                <dl data-id="{{poiid}}">
+                    <dt>
+                        <img src="{{frontImg}}" alt="">
+                        </dt>
+                    <dd>
+                        <h2>{{name}}</h2>
+                        <p><span>{{scoreIntro}}</span><b>{{historySaleCount}}</b></p>
+                        <address>{{addr}}</address>
+                        <strong><span>￥{{lowestPrice}}起</span><b>{{poiLastOrderTime}}</b></strong>
+                    </dd>
+                </dl>
+                {{/each}}
+            </script>
+        </section>
+    </div>
+    <script src="../js/libs/require.js"></script>
+    <script>
+        require(['../js/main.js'], function() {
+            require(['list'])
+        })
+    </script>
+</body>
+
+</html>
